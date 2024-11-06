@@ -1,0 +1,371 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    background-color: white; 
+    color: #333; 
+}
+
+a {
+    text-decoration: none; 
+    color: black;
+}
+
+
+
+header {
+    height: 60px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+    display: flex; 
+    position: fixed; 
+    width: 99%; 
+    z-index: 1000; 
+}
+
+main {
+    padding: 10px; 
+}
+
+.logo {
+    display: flex; 
+    padding-left: 0px; 
+    align-items: center;
+}
+
+.logo-img {
+    height: 70px; 
+    margin-right: 10px; 
+}
+
+nav a {
+    font-weight: 600; 
+    padding-right: 15px; 
+}
+
+nav a:hover {
+    color: #f44336; 
+}
+
+h1.amigos {
+    color: white; 
+    font-size: 20px; 
+}
+
+header nav ul li a:hover {
+    text-decoration: underline; 
+}
+
+.principal {
+    margin: 72px 270px 5px 270px; 
+}
+
+.principal h2 {
+    font-size: 28px; 
+    margin-bottom: 1px; 
+}
+
+.principal p {
+    font-size: 20px; 
+    line-height: 1.6; 
+}
+
+section img {
+    width: 100%; 
+}
+
+.carrerani, .ambientesi {
+    width: 20%; 
+    height: auto; 
+    margin: 10px 10px; 
+    transition: transform 0.3s; 
+}
+
+.carrerani:hover, .ambientesi:hover {
+    transform: scale(1.05); 
+}
+
+section {
+    background-color: white; 
+    margin: 10px 270px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    border-bottom: 2px solid #442889; 
+}
+
+section iframe {
+    height: auto; 
+    margin: 10px 5px; 
+}
+
+section h2 {
+    flex-basis: 100%; 
+    font-size: 24px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+section p {
+    flex: 1; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-right: 30px; 
+}
+
+input[type="checkbox"] {
+    display: none; 
+}
+
+.redes {
+    list-style: none; 
+    padding: 0; 
+    margin: 0px 0px 0px 450px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+}
+
+.contacto li {
+    display: inline-block; 
+}
+
+.contacto a {
+    text-decoration: none; 
+    color: white; 
+}
+
+.dire {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.dire iframe {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.contacto {
+    background-color: rgb(92, 88, 88); 
+    color: white; 
+    padding: 20px; 
+    max-width: 1600px; 
+    text-align: center;
+    border-bottom: none; 
+    margin-bottom: 0; 
+}
+
+.direccion {
+    background-color: rgb(92, 88, 88); 
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 20px; 
+    max-width: 1600px; 
+    margin-top: 0; 
+    border-bottom: 2px rgb(92, 88, 88); 
+}
+
+.menu-icono{
+    background-color: #442889;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 720px) {
+    .secundario {
+        margin: 5px; 
+    }
+
+        /* Ajustes para la clase 'principal' en pantallas pequeñas */
+        .principal {
+            margin: 45px 0px 5px 0px; /* margenes*/
+            padding: 5px; /* relleno*/
+        }
+
+    .principal h2, .secundario h2 {
+        font-size: 15px; 
+    }
+
+    .principal p, .secundario p {
+        font-size: 16px; 
+    }
+
+    .carrerani, .ambientesi {
+        width: 90%; 
+        margin: 10px auto; 
+    }
+
+    .redes {
+        margin: 0; 
+        flex-direction: column; 
+    }
+
+    .contacto, .direccion {
+        margin: 10px; 
+        padding: 15px;
+        margin-top: 0; 
+        
+    }
+
+
+    
+        header {
+            font-size: 10px; /* tamaño de encabezado*/
+            width: 95%; /* ocupa el ancho de la ventana */
+            height: 40px; 
+            
+        }
+
+        .logo-img {
+            height: 40px; 
+            margin-right: 2px; 
+        }
+
+    nav {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav a {
+        padding: 5px; 
+    }
+
+    .dire {
+        margin-top: 10px; 
+    }
+
+                                /* Estilo para el menú en dispositivos móviles */
+                                nav {
+                                    display: none; /* Ocultar nav por defecto */
+                                }
+                                #menu:checked ~ nav {
+                                    display: block; /* Mostrar nav cuando el menú está seleccionado */
+                                }
+                                .menu-icono {
+                                    cursor: pointer;
+                                    height: 40px; 
+                                }
+    
+                nav {
+                    background-color: white;
+                    position: absolute; /* Para superponer otros contenidos */
+                    top: 50px; /* Ajusta según el diseño */
+                    right: 0;
+                    width: 40%;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                }
+                nav a {
+                    display: block; /* Hacer que los enlaces se apilen verticalmente */
+                    padding: 10px;
+                    text-align: center; /* Centrar texto */
+                    border-bottom: 1px solid #ccc; /* Divisor opcional */
+                }
+}
+
+/* pc */
+@media screen and (min-width: 1025px) {
+    .menu-icono {
+        display: none; /*poculta el icono */
+    }
+}
+
+/* Estilo responsive para tablets con anchos entre 601 y 1024 píxeles */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    
+    .secundario {
+        margin: 10px; 
+        padding: 15px; 
+    }
+
+        /* Ajustes para la clase 'principal' en pantallas pequeñas */
+        .principal {
+            margin: 45px 10px 5px 10px; /* margenes*/
+            padding: 15px; /* relleno*/
+        }
+
+    .principal h2, .secundario h2 {
+        font-size: 20px; 
+    }
+
+    .principal p, .secundario p {
+        font-size: 16px; 
+    }
+
+    .carrerani, .ambientesi {
+        width: 90%; 
+        margin: 10px auto; 
+    }
+
+    .redes {
+        margin: 0; 
+        flex-direction: column; 
+    }
+
+    .contacto, .direccion {
+        margin: 10px; 
+        padding: 15px;
+        
+    }
+
+
+    
+        header {
+            font-size: 12px; /* tamaño de encabezado*/
+            width: 95%; /* ocupa el ancho de la ventana */
+            height: 50px; 
+            
+        }
+
+        .logo-img {
+            height: 50px; 
+            margin-right: 2px; 
+        }
+
+    nav {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav a {
+        padding: 5px; 
+    }
+
+    .dire {
+        margin-top: 10px; 
+    }
+
+                                /* Estilo para el menú en dispositivos móviles */
+                                nav {
+                                    display: none; /* Ocultar nav por defecto */
+                                }
+                                #menu:checked ~ nav {
+                                    display: block; /* Mostrar nav cuando el menú está seleccionado */
+                                }
+                                .menu-icono {
+                                    cursor: pointer;
+                                    height: 40px; 
+                                }
+    
+                nav {
+                    background-color: white;
+                    position: absolute; /* Para superponer otros contenidos */
+                    top: 50px; /* Ajusta según el diseño */
+                    right: 0;
+                    width: 40%;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                }
+                nav a {
+                    display: block; /* Hacer que los enlaces se apilen verticalmente */
+                    padding: 10px;
+                    text-align: center; /* Centrar texto */
+                    border-bottom: 1px solid #ccc; /* Divisor opcional */
+                }
+}

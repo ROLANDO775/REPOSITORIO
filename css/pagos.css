@@ -1,0 +1,204 @@
+body {
+    /* todo lo que contiene lo centra en la página */
+    box-sizing: border-box; /* */
+    font-family: Arial, Helvetica, sans-serif; /* tipo de letra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    box-shadow: 0 0 70px rgba(9, 9, 9, 0.2); /* ponerle sombras a los lados y arriba */
+    padding: 80px 100px; /* tamaño de los bordes */
+    border-radius: 35px; /* redondea los bordes */
+    display: flex; /* expande los botones */
+    flex-direction: column; /* los forma por columnas */
+    text-align: center; /* centra todas las columnas */
+    width: 380px; /* expande el cuadro de los botones */
+}
+
+form h1 {
+    font-size: 35px; /* tamaño del título */
+    color: rgb(12, 10, 14);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* tipo de letra para el título */
+}
+
+form p {
+    font-size: 15px;
+    color: rgb(16, 15, 16);
+    margin-bottom: 35px; /* separa con los campos */
+    font-family: Arial, Helvetica, sans-serif; /* tipo de letra para el párrafo */
+}
+
+.input-tex {
+    position: relative;
+    width: 275px; /* los separa de la izquierda */
+    margin-bottom: 20px; /* los separa de cada celda */
+}
+
+input,
+textarea {
+    color: #0d0d0d; /* color cuando escribe */
+    padding: 20px 15px 20px 60px; /* agranda las celdas de cada uno */
+    width: 120%; /* las celdas al 100% */
+    border-radius: 25px; /* redondea los bordes */
+    border: 0; /* quita los bordes */
+    box-shadow: 0 0 20px rgba(177, 177, 181, 0.7);
+    outline: none; /* deja de mostrar los bordes cuando lo seleccionamos */
+    font-family: Arial, Helvetica, sans-serif; /* tipo de letra para input y textarea */
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 16px;
+    color: rgb(122, 120, 122);
+    font-style: normal; /* placeholder sin cursiva */
+}
+
+.input-icono {
+    position: absolute; /* los pone atrás de las celdas */
+    height: 20px; /* agranda el tamaño */
+    width: 40px;
+    right: -110px; /* lo manda al otro lado de las celdas */
+    top: 30%; /* los saca de las celdas y los posiciona */
+}
+
+textarea {
+    resize: none;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones a los lados */
+}
+.cancel-button {
+    padding: 15px 30px; /* Aumenta el padding del botón */
+    font-size: 18px; /* Aumenta el tamaño de la fuente del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif; /* tipo de letra para los botones */
+}
+
+button {
+    padding: 12px 20px; /* Ajuste del padding para pantallas pequeñas */
+    background-color: #442889;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* Tamaño de fuente reducido */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.cancel-button {
+    background-color: #f44336; /* Color de fondo rojo */
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel-button:hover {
+    background-color: #c62828; /* Color de fondo rojo oscuro al pasar el ratón */
+}
+
+/* Estilos para teléfonos móviles */
+@media screen and (max-width: 720px) {
+    
+    form {
+        box-shadow: 0 0 40px rgba(9, 9, 9, 0.2); /* Sombra más sutil para pantallas pequeñas */
+        padding: 40px 20px; /* Reducción del padding para mejor ajuste */
+        border-radius: 20px; /* Radio de borde menor para pantallas pequeñas */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%; /* El formulario ocupa el ancho completo disponible */
+        max-width: 80%; /* El formulario no será más ancho que el 90% del contenedor */
+    }
+    
+    form h1 {
+        font-size: 25px; /* Tamaño de fuente reducido */
+        color: rgb(12, 10, 14);
+        margin: 0;
+    }
+    
+    input {
+        color: #0d0d0d;
+        padding: 15px 5px; /* Ajuste del padding para pantallas pequeñas */
+        width: 100%; /* Los campos ocupan el ancho completo */
+        border-radius: 15px; /* Reducción del radio de borde */
+        border: 0;
+        box-shadow: 0 0 15px rgba(177, 177, 181, 0.5); /* Sombra más sutil */
+        outline: none;
+    }
+
+    
+    input::placeholder {
+        font-size: 14px; /* Tamaño de fuente reducido para el placeholder */
+        color: rgb(122, 120, 122);
+    }
+    
+    .input-icono {
+        position: absolute;
+        height: 18px; /* Tamaño reducido del ícono */
+        width: 30px; /* Tamaño reducido del ícono */
+        right: 10px; /* Ajuste de la posición del ícono */
+        top: 50%; /* Centrado vertical del ícono */
+        transform: translateY(-50%); /* Alineación vertical */
+    } 
+    button {
+        padding: 12px 20px; /* Ajuste del padding para pantallas pequeñas */
+        background-color: #442889;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px; /* Tamaño de fuente reducido */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    
+    .cancel-button {
+        padding: 12px 20px; /* Ajuste del padding para el botón cancelar */
+        background-color: #f44336;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px; /* Tamaño de fuente reducido */
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    textarea {
+        color: #0d0d0d; /* color cuando escribe */
+        padding: 15px 5px; /* Ajuste del padding para pantallas pequeñas */
+        width: 100%; /* Los campos ocupan el ancho completo */
+        border-radius: 15px; /* Reducción del radio de borde */
+        border: 0;
+        box-shadow: 0 0 15px rgba(177, 177, 181, 0.5); /* Sombra más sutil */
+        outline: none;
+    } /* tipo de letra para input y textarea */
+    
+    
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 16px;
+        color: rgb(122, 120, 122);
+        font-style: normal; /* placeholder sin cursiva */
+    }
+
+    
+}
+
+
+
+
